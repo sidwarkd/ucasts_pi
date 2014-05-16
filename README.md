@@ -25,3 +25,4 @@ If you're interested in contributing to the project I've included a wish list be
  - Add more helper functions. Specifically the 7 Segment Display could use some helpers around the decimals, apostrophe, and colon
  - Improve the documentation if you see something wrong.
  - Have RPi.GPIO only be imported if using an I/O class. Currently it's always imported.
+ - Implement evented callbacks for switch and button

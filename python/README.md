@@ -45,7 +45,6 @@ led = LED(12, active_high=True, default_on=True)
 led.on()
 led.off()
 led.toggle()
-
 ```
 
 ##Relay
@@ -80,7 +79,6 @@ relay = Relay(12, default_on=True)
 relay.on()
 relay.off()
 relay.toggle()
-
 ```
 
 ##Switch
@@ -162,7 +160,7 @@ Will display **temperature** (passed as a numeric type) with the given **unit** 
 from ucasts import SparkfunSevenSegmentDisplay
 disp = SparkfunSevenSegmentDisplay()
 disp.write("cool") # will display "cool" on the display
-disp.write(50)     # will add "g" on the display
+disp.write(50)     # will add "2" on the display since 50 is the ASCII value for '2'
 disp.write([0x01, 0x02], clear=True)  # will display "12" on the display after clearing it
 disp.display_temp(32.0, "F")
 disp.display_time()
@@ -196,5 +194,4 @@ temp_sensor = TMP102()  # Uses bus 1 and address 0x48
 temp_sensor = TMP102(address=0x49)
 tempF = temp_sensor.get_temp_in_f()
 tempC = temp_sensor.get_temp_in_c()
-
 ```
