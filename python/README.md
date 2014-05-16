@@ -10,7 +10,7 @@ Python code for interacting with various pieces of hardware on the Raspberry Pi.
   - [Generic Button](#button)
   - [Sparkfun 7 Segment Serial Display](#sparkfun-7-segment-serial-display)
   - [TMP102 Sensor](#tmp102-sensor)
-  - [ID-3LA, ID-12LA, and ID-20LA RFID Readers](python/README.md#rfid-reader)
+  - [ID-3LA, ID-12LA, and ID-20LA RFID Readers](#rfid-reader)
 
 ##LED
 The ```ucasts``` module supports LEDs wired up as either active high or active low. The default is active low which assumes you have the cathode (negative side of the LED) connected to your I/O pin. When an ```LED``` object is deleted it will turn off the associated LED.

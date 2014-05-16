@@ -6,13 +6,13 @@ Spend more time creating your projects instead of buried in the datasheet trying
 
 ## Supported Hardware - Python
 
-  - [Generic LED](python/README.md#led)
-  - [Generic Relay](python/README.md#relay)
-  - [Generic Switch](python/README.md#switch)
-  - [Generic Button](python/README.md#button)
-  - [Sparkfun 7 Segment Serial Display](python/README.md#sparkfun-7-segment-serial-display)
-  - [TMP102 Sensor](python/README.md#tmp102-sensor)
-  - [ID-3LA, ID-12LA, and ID-20LA RFID Readers](python/README.md#rfid-reader)
+  - [Generic LED](python#led)
+  - [Generic Relay](python#relay)
+  - [Generic Switch](python#switch)
+  - [Generic Button](python#button)
+  - [Sparkfun 7 Segment Serial Display](python#sparkfun-7-segment-serial-display)
+  - [TMP102 Sensor](python#tmp102-sensor)
+  - [ID-3LA, ID-12LA, and ID-20LA RFID Readers](python#rfid-reader)
 
 ## Supported Hardware - NodeJS
 
