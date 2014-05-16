@@ -12,6 +12,7 @@ Spend more time creating your projects instead of buried in the datasheet trying
   - [Generic Button](python/README.md#button)
   - [Sparkfun 7 Segment Serial Display](python/README.md#sparkfun-7-segment-serial-display)
   - [TMP102 Sensor](python/README.md#tmp102-sensor)
+  - [ID-3LA, ID-12LA, and ID-20LA RFID Readers](python/README.md#rfid-reader)
 
 ## Supported Hardware - NodeJS
 
@@ -25,4 +26,5 @@ If you're interested in contributing to the project I've included a wish list be
  - Add more helper functions. Specifically the 7 Segment Display could use some helpers around the decimals, apostrophe, and colon
  - Improve the documentation if you see something wrong.
  - Have RPi.GPIO only be imported if using an I/O class. Currently it's always imported.
- - Implement evented callbacks for switch and button
+ - Implement evented callbacks for switch, button, and rfid reader
+ - Add checksum verification to InnovationsRFIDReader class.

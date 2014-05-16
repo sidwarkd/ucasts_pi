@@ -10,6 +10,7 @@ Python code for interacting with various pieces of hardware on the Raspberry Pi.
   - [Generic Button](#button)
   - [Sparkfun 7 Segment Serial Display](#sparkfun-7-segment-serial-display)
   - [TMP102 Sensor](#tmp102-sensor)
+  - [ID-3LA, ID-12LA, and ID-20LA RFID Readers](python/README.md#rfid-reader)
 
 ##LED
 The ```ucasts``` module supports LEDs wired up as either active high or active low. The default is active low which assumes you have the cathode (negative side of the LED) connected to your I/O pin. When an ```LED``` object is deleted it will turn off the associated LED.
@@ -167,7 +168,7 @@ disp.display_time()
 ```
 
 ##TMP102 Sensor
-Interface for the [TMP102 Sensor]() from Sparkfun.
+Interface for the [TMP102 Sensor](https://www.sparkfun.com/products/11931) from Sparkfun.
 
 ###Usage
 ```
@@ -194,4 +195,31 @@ temp_sensor = TMP102()  # Uses bus 1 and address 0x48
 temp_sensor = TMP102(address=0x49)
 tempF = temp_sensor.get_temp_in_f()
 tempC = temp_sensor.get_temp_in_c()
+```
+
+##RFID Reader
+Interface for the [ID-3LA](https://www.sparkfun.com/products/11862), [ID-12LA](https://www.sparkfun.com/products/11827) and [ID-20LA](https://www.sparkfun.com/products/11828) RFID readers.
+
+###Usage
+```
+ID3LA()
+ID12LA()
+ID20LA()
+```
+
+###Functions
+
+#### get_last_scan()
+Returns the unique id of the last scanned tag. **Note:**Until an evented version of this call is created you need to call *get_last_scan()* often enough to prevent queuing of scanned tags. If multiple tags are scanned between calls to this function, calls to the function will return the tags in first-in-first-out order.
+
+#### wait_for_scan()
+This function will block program execution until a tag is scanned at which time it returns the unique id of the scanned tag.
+
+###Example
+```python
+from ucasts import ID12LA
+reader = ID12LA()
+tag = reader.get_last_scan()
+if tag != None:
+  # Do something with tag
 ```
